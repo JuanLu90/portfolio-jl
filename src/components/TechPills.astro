@@ -1,0 +1,31 @@
+---
+interface Tech {
+  name: string;
+  icon: string;
+  textColor?: string;
+  bgColor?: string;
+}
+
+interface Props {
+  techs: Tech[];
+}
+
+const { techs } = Astro.props as Props;
+---
+
+<div class="flex flex-wrap gap-2 mt-4">
+  {
+    techs.map((tech) => (
+      <span
+        class={`flex items-center gap-1 px-3 py-1 rounded-full text-xs border ${tech.textColor || "text-primary"} ${tech.bgColor || "bg-background"} border-none bg-opacity-40`}
+      >
+        <img
+          src={tech.icon}
+          alt={tech.name}
+          class="w-4 h-4 inline-block align-text-bottom"
+        />
+        {tech.name}
+      </span>
+    ))
+  }
+</div>
