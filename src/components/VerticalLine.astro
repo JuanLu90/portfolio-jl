@@ -1,8 +1,33 @@
 ---
-const { height = "h-32" } = Astro.props;
+const { height = "h-32", id, endCircle = true } = Astro.props;
 ---
+
+<style>
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    70% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+</style>
 
 <div class="flex flex-col items-center">
   <div class={`w-1 bg-slate-300 ${height} mb-2`}></div>
-  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+
+  {
+    endCircle && (
+      <div class="relative flex items-center justify-center" id={id}>
+        <div class="w-3 h-3 rounded-full bg-yellow-500 relative z-10" />
+        <span class="absolute w-4 h-4 rounded-full bg-yellow-500 animate-[ripple_1.5s_infinite]" />
+      </div>
+    )
+  }
 </div>
