@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import TechPills from "./TechPills.astro";
+import Github from "./icons/Github.astro";
+import Web from "./icons/Web.astro";
+
+import nextLogo from "../assets/icons/nextjs_logo.png";
+import tsLogo from "../assets/icons/ts_logo.svg";
+import tailwindLogo from "../assets/icons/tailwind_logo.svg";
+import shadcnLogo from "../assets/icons/shadcn_logo.png";
+import fastapiLogo from "../assets/icons/fastapi_logo.png";
+import DashboardProyect from "../assets/dashboard_proyect.png";
+
+const DashboardProyectStack = [
+  {
+    name: "Next.js",
+    icon: nextLogo.src,
+    bgColor: "bg-black",
+    textColor: "text-white",
+  },
+  {
+    name: "TypeScript",
+    icon: tsLogo.src,
+    bgColor: "bg-blue-500",
+    textColor: "text-white",
+  },
+  {
+    name: "TailwindCSS",
+    icon: tailwindLogo.src,
+    bgColor: "bg-cyan-400",
+    textColor: "text-white",
+  },
+  {
+    name: "Shadcn/ui",
+    icon: shadcnLogo.src,
+    bgColor: "bg-gray-800",
+    textColor: "text-white",
+  },
+  {
+    name: "FastAPI",
+    icon: fastapiLogo.src,
+    bgColor: "bg-emerald-500",
+    textColor: "text-white",
+  },
+];
+---
+
+---
+
+<section id="projects" class="scroll-mt-12">
+  <h2
+    class="text-3xl font-extrabold tracking-tight mb-2 text-slate-300 my-6 text-center"
+  >
+    Projects
+  </h2>
+
+  <div class="mt-6">
+    <h3 class="text-2xl font-bold tracking-tight mb-4 text-slate-200">
+      SaaS Admin Dashboard
+    </h3>
+
+    <Image
+      src={DashboardProyect}
+      alt="Dashboard saas admin project"
+      class="border border-slate-800 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+    />
+
+    <TechPills techs={DashboardProyectStack} />
+
+    <p class="text-slate-200 mt-4">
+      A full-stack admin panel built with Next.js 14 and FastAPI, featuring JWT
+      authentication with role-based access control, interactive data
+      visualizations, automated testing, and a modern responsive UI. Designed
+      for scalability, security, and production readiness.
+    </p>
+
+    <div class="flex gap-4 mt-4">
+      <a
+        href="https://github.com/JuanLu90/dashboard-sass-admin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors duration-200"
+      >
+        <Github class="w-5 h-5" />
+        <span>GitHub</span>
+      </a>
+
+      <a
+        href="https://dashboard-sass-admin.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors duration-200"
+      >
+        <Web class="w-5 h-5" />
+        <span>Live Demo</span>
+      </a>
+    </div>
+  </div>
+</section>

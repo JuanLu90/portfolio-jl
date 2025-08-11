@@ -1,0 +1,34 @@
+---
+import Arrow from "./icons/Arrow.astro";
+
+interface Props {
+  href: string;
+  arrowOrientation?: "up" | "down";
+  arrowAnimate?: "none" | "bounce" | "wave";
+  arrowClass?: string;
+  onClick?: (event: MouseEvent) => void;
+}
+
+const {
+  href,
+  arrowOrientation = "down",
+  arrowAnimate = "bounce",
+  arrowClass = "w-12 h-12 text-yellow-500",
+  onClick,
+} = Astro.props;
+---
+
+<a
+  href={href}
+  class="block"
+  data-spy-link
+  {...onClick ? { "on:click": onClick } : {}}
+>
+  <div class="flex justify-center">
+    <Arrow
+      orientation={arrowOrientation}
+      animate={arrowAnimate}
+      class={arrowClass}
+    />
+  </div>
+</a>
