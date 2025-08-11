@@ -17,10 +17,60 @@ const { title = "Juan luis Moreno | Frontend Developer", children } =
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen min-w-full font-sans text-primary m-0 bg-slate-900">
+  <body
+    class="font-sans text-primary m-0 bg-slate-900 max-w-3xl w-full mx-auto mt-24 mb-28 px-4"
+  >
     <Header />
-    <div class="max-w-3xl w-full mx-auto mt-20 px-4">
-      <slot />
-    </div>
+    <slot />
   </body>
 </html>
+
+<script is:inline>
+  const run = () => {
+    console.log("[navHighlight] init");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("[data-spy-link]");
+
+    if (!sections.length || !navLinks.length) return;
+
+    const setActive = (hash) => {
+      navLinks.forEach((a) => {
+        const active = a.getAttribute("href") === hash;
+        a.classList.toggle("text-yellow-500", active);
+        a.classList.toggle("text-slate-300", !active);
+      });
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target?.id) setActive("#" + visible.target.id);
+      },
+      {
+        root: null,
+        rootMargin: "-120px 0px -70% 0px",
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((s) => io.observe(s));
+
+    navLinks.forEach((a) => {
+      a.addEventListener("click", () => {
+        const href = a.getAttribute("href");
+        if (href) setActive(href);
+      });
+    });
+
+    if (location.hash) setActive(location.hash);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run, { once: true });
+  } else {
+    run();
+  }
+  document.addEventListener("astro:page-load", run);
+</script>

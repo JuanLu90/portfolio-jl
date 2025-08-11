@@ -1,0 +1,39 @@
+---
+import VerticalLine from "../components/VerticalLine.astro";
+import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
+import AboutMe from "./AboutMe.astro";
+import ScrollLink from "./ScrollLink.astro";
+import Hero from "./Hero.astro";
+---
+
+<Hero />
+
+<VerticalLine height="h-8" />
+
+<AboutMe />
+
+<VerticalLine height="h-32" endCircle={false} />
+
+<ScrollLink href="#experience" arrowOrientation="down" arrowAnimate="bounce" />
+
+<VerticalLine height="h-[120rem]" />
+
+<Experience />
+
+<VerticalLine height="h-[120rem]" />
+
+<Projects />
+
+<VerticalLine height="h-32" endCircle={false} />
+
+<ScrollLink
+  href="#"
+  arrowOrientation="up"
+  arrowAnimate="wave"
+  arrowClass="w-24 h-24 text-yellow-500"
+  onClick={(e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+/>

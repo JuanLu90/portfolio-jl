@@ -43,11 +43,13 @@ const DashboardProyectStack = [
     textColor: "text-white",
   },
 ];
+
+const btnBase =
+  "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background";
+const btnDark = `${btnBase} bg-gray-800 text-white hover:bg-gray-700`;
 ---
 
----
-
-<section id="projects" class="scroll-mt-12">
+<section id="projects" class="scroll-mt-32">
   <h2
     class="text-3xl font-extrabold tracking-tight mb-2 text-slate-300 my-6 text-center"
   >
@@ -59,11 +61,19 @@ const DashboardProyectStack = [
       SaaS Admin Dashboard
     </h3>
 
-    <Image
-      src={DashboardProyect}
-      alt="Dashboard saas admin project"
-      class="border border-slate-800 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
-    />
+    <a
+      href="https://dashboard-sass-admin.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block overflow-hidden border border-slate-800"
+      aria-label="Open live demo SaaS Admin Dashboard"
+    >
+      <Image
+        src={DashboardProyect}
+        alt="Dashboard saas admin project"
+        class="transition-transform duration-300 ease-in-out hover:scale-105"
+      />
+    </a>
 
     <TechPills techs={DashboardProyectStack} />
 
@@ -74,12 +84,12 @@ const DashboardProyectStack = [
       for scalability, security, and production readiness.
     </p>
 
-    <div class="flex gap-4 mt-4">
+    <div class="flex flex-wrap gap-3 mt-4">
       <a
         href="https://github.com/JuanLu90/dashboard-sass-admin"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors duration-200"
+        class={btnDark}
       >
         <Github class="w-5 h-5" />
         <span>GitHub</span>
@@ -89,10 +99,10 @@ const DashboardProyectStack = [
         href="https://dashboard-sass-admin.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition-colors duration-200"
+        class={`${btnDark} justify-center min-w-[140px] whitespace-nowrap`}
       >
         <Web class="w-5 h-5" />
-        <span>Live Demo</span>
+        <span>Live&nbsp;Demo</span>
       </a>
     </div>
   </div>

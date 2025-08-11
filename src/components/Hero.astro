@@ -1,80 +1,8 @@
----
-import VerticalLine from "../components/VerticalLine.astro";
-import Experience from "./Experience.astro";
-import Projects from "./Projects.astro";
-import AboutMe from "./AboutMe.astro";
-import ScrollLink from "./ScrollLink.astro";
-import HeroSection from "./HeroSection.astro";
----
-
-<HeroSection />
-
-<VerticalLine height="h-8" />
-
-<AboutMe />
-
-<VerticalLine height="h-32" endCircle={false} />
-
-<ScrollLink href="#experience" arrowOrientation="down" arrowAnimate="bounce" />
-
-<VerticalLine height="h-[120rem]" />
-
-<Experience />
-
-<VerticalLine height="h-[120rem]" />
-
-<Projects />
-
-<VerticalLine height="h-32" endCircle={false} />
-
-<ScrollLink
-  href="#"
-  arrowOrientation="up"
-  arrowAnimate="wave"
-  arrowClass="w-24 h-24 text-yellow-500"
-  onClick={(e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }}
-/>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
-
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500");
-            } else {
-              item.classList.remove("text-yellow-500");
-            }
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
-        });
-      }
-    };
-  });
-</script>
+<section>
+  <div class="z-10 text-center">
+    <h1 class="text-6xl font-extrabold tracking-tight text-slate-300">
+      Juan Luis Moreno
+    </h1>
+    <p class="text-4xl font-bold my-6 text-yellow-500">Frontend Developer</p>
+  </div>
+</section>

@@ -12,9 +12,10 @@ import SocialicityLogo from "../assets/socialicity_logo.png";
 import TdLogo from "../assets/td_logo.png";
 import VerticalLine from "./VerticalLine.astro";
 import Arrow from "./icons/Arrow.astro";
+import ScrollLink from "./ScrollLink.astro";
 ---
 
-<section id="experience" class="scroll-mt-12">
+<section id="experience" class="scroll-mt-32">
   <h2
     class="text-3xl font-extrabold tracking-tight mb-2 text-slate-300 my-6 text-center"
   >
@@ -234,9 +235,6 @@ import Arrow from "./icons/Arrow.astro";
   </BoxContainer>
 
   <VerticalLine height="h-32" endCircle={false} />
-  <a href="#projects" class="block" data-spy-link>
-    <div class="flex justify-center">
-      <Arrow animate="bounce" class="w-12 h-12 text-yellow-500" />
-    </div>
-  </a>
+
+  <ScrollLink href="#projects" arrowOrientation="down" arrowAnimate="bounce" />
 </section>
