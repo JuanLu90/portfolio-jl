@@ -15,223 +15,289 @@ import Arrow from "./icons/Arrow.astro";
 import ScrollLink from "./ScrollLink.astro";
 ---
 
-<section id="experience" class="scroll-mt-32">
+<section id="experience" class="scroll-mt-32" aria-labelledby="exp-heading">
   <h2
+    id="exp-heading"
     class="text-3xl font-extrabold tracking-tight mb-2 text-slate-300 my-6 text-center"
   >
     Experience
   </h2>
 
   <BoxContainer>
-    <div class="flex items-center justify-between">
-      <Image src={EntegyLogo} alt="Entelgy" height="80" />
-      <span>Remote | May 2022 – Currently</span>
-    </div>
+    <article aria-labelledby="entelgy-title">
+      <header class="flex items-center justify-between">
+        <Image src={EntegyLogo} alt="Entelgy Logo" height="80" />
+        <span
+          >Remote | <time datetime="2022-05">May 2022</time> - <time
+            datetime="present">Currently</time
+          ></span
+        >
+      </header>
 
-    <div class="mt-6">
-      <div class="ml-12">
-        <div class="flex items-center justify-between">
-          <Image
-            src={CajaruralLogo}
-            alt="Cajarural"
-            height="60"
-            class="w-auto object-contain flex-shrink-0 mr-6"
-          />
-          <div class="flex flex-col">
+      <div class="mt-6">
+        <div class="ml-12">
+          <figure class="flex items-center justify-between">
+            <Image
+              src={CajaruralLogo}
+              alt="Cajarural"
+              height="60"
+              class="w-auto object-contain flex-shrink-0 mr-6"
+            />
+            <div class="flex flex-col">
+              <figcaption>
+                <h3 class="text-yellow-500 font-semibold">
+                  Front end developer
+                </h3>
+                <p>
+                  <time datetime="2025-06">Jun 2025</time> - <time
+                    datetime="present">Currently</time
+                  >
+                </p>
+              </figcaption>
+            </div>
+          </figure>
+          <h3 id="entelgy-title" class="sr-only">
+            Entelgy — Frontend Developer
+          </h3>
+          <ul class="list-disc mt-4 pl-5">
+            <li>
+              Led the migration and modernization of a legacy internal app.
+            </li>
+            <li>
+              Refactored obsolete code patterns and replaced deprecated APIs,
+              improving maintainability, performance, and compatibility with
+              modern browsers.
+            </li>
+            <li>
+              <span class="text-yellow-200 font-semibold">JQuery</span> - JavaScript
+              (ES5/ES6) - HTML - CSS
+            </li>
+          </ul>
+        </div>
+
+        <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+
+        <div class="ml-12">
+          <figure class="flex items-center justify-between">
+            <Image
+              src={MasmovilLogo}
+              alt="Masmovil"
+              height="20"
+              class="object-contain flex-shrink-0 mr-6"
+            />
+            <figcaption>
+              <p class="text-yellow-500 font-semibold">Full Stack developer</p>
+              <p>6 months</p>
+            </figcaption>
+          </figure>
+          <h3 id="entelgy-title" class="sr-only">
+            Entelgy — Full Stack Developer
+          </h3>
+          <ul class="list-disc mt-4 pl-5">
+            <li>
+              Development and maintenance of functionalities of their internal
+              app called FiberTool.
+            </li>
+            <li>
+              <span class="text-yellow-200 font-semibold">Vue.Js v3</span> - TypeScript
+              - <span class="text-yellow-200 font-semibold">NestJs</span> - MikroOrm
+              - PostgreSQL
+            </li>
+          </ul>
+        </div>
+
+        <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+
+        <div class="ml-12">
+          <figure class="flex items-center justify-between">
+            <Image
+              src={OpenbankLogo}
+              alt="OpenBank"
+              height="30"
+              class="object-contain flex-shrink-0 mr-6"
+            />
+            <figcaption class="flex flex-col">
+              <p class="text-yellow-500 font-semibold">Front end developer</p>
+              <p>2 years</p>
+            </figcaption>
+          </figure>
+          <h3 id="entelgy-title" class="sr-only">
+            Entelgy — Frontend Developer
+          </h3>
+          <ul class="list-disc mt-4 pl-5">
+            <li>
+              Development and maintenance of functionalities across different
+              Openbank verticals and multiple countries.
+            </li>
+            <li>
+              <span class="text-yellow-200 font-semibold">React</span> - Typescript
+              - Styled Components - Microfrontends - SonarQube - RTL – PR review
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </BoxContainer>
+
+  <VerticalLine height="h-16" />
+
+  <BoxContainer>
+    <article aria-labelledby="gft-title">
+      <header class="flex items-center justify-between">
+        <Image src={GftLogo} alt="GFT Logo" height="40" />
+      </header>
+      <div class="mt-6">
+        <div class="ml-12">
+          <figure class="flex items-center justify-between">
+            <Image
+              src={BbvaLogo}
+              alt="BBVA"
+              height="25"
+              class="object-contain flex-shrink-0 mr-6"
+            />
+            <figcaption class="flex flex-col">
+              <p class="text-yellow-500 font-semibold">Front end developer</p>
+              <p>
+                <time datetime="2021-10">Oct 2021</time> - <time
+                  datetime="2022-05">May 2022</time
+                >
+              </p>
+            </figcaption>
+          </figure>
+          <h3 id="gft-title" class="sr-only">GFT — Frontend Developer</h3>
+          <ul class="list-disc mt-4 pl-5">
+            <li>
+              Developed features for BBVA Spain's mobile app using <span
+                class="text-yellow-200 font-semibold">EmberJs</span
+              >.
+            </li>
+            <li>
+              Worked under Kanban methodology with Atlassian tools (Jira,
+              Bitbucket, Bamboo).
+            </li>
+            <li>
+              Unit testing with Jest and E2E testing using a custom framework
+              based on Cucumber.
+            </li>
+            <li>Automated tasks with Husky and Lint-staged.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </BoxContainer>
+
+  <VerticalLine height="h-16" />
+
+  <BoxContainer>
+    <article aria-labelledby="pwc-title">
+      <header>
+        <figure class="flex items-center justify-between">
+          <Image src={PwcLogo} alt="PWC Logo" height="80" />
+
+          <figcaption class="flex flex-col">
             <p class="text-yellow-500 font-semibold">Front end developer</p>
-            <p>Jun 2025 - Currently</p>
-          </div>
+            <p>
+              <time datetime="2021-05">May 2021</time> - <time
+                datetime="2021-10">May 2022</time
+              >
+            </p>
+          </figcaption>
+        </figure>
+      </header>
+      <div class="mt-6">
+        <div class="ml-12">
+          <h3 id="pwc-title" class="sr-only">PWC — Frontend Developer</h3>
+          <ul class="list-disc mt-4">
+            <li>
+              Developing in <span class="text-yellow-200 font-semibold"
+                >Angular 10</span
+              > and RxJS an app related with big data.
+            </li>
+            <li>Units test with Jasmine.</li>
+            <li>Continuous integration with Jenkins and Kubernetes.</li>
+          </ul>
         </div>
-        <ul class="list-disc mt-4 pl-5">
-          <li>Led the migration and modernization of a legacy internal app.</li>
-          <li>
-            Refactored obsolete code patterns and replaced deprecated APIs,
-            improving maintainability, performance, and compatibility with
-            modern browsers.
-          </li>
-          <li>
-            <span class="text-yellow-200 font-semibold">JQuery</span> - JavaScript
-            (ES5/ES6) - HTML - CSS
-          </li>
-        </ul>
       </div>
+    </article>
+  </BoxContainer>
 
-      <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+  <VerticalLine height="h-16" />
 
-      <div class="ml-12">
-        <div class="flex items-center justify-between">
-          <Image
-            src={MasmovilLogo}
-            alt="Masmovil"
-            height="20"
-            class="object-contain flex-shrink-0 mr-6"
-          />
-          <div class="flex flex-col">
-            <p class="text-yellow-500 font-semibold">Full Stack developer</p>
-            <p>6 months</p>
-          </div>
-        </div>
-        <ul class="list-disc mt-4 pl-5">
-          <li>
-            Development and maintenance of functionalities of their internal app
-            called FiberTool.
-          </li>
-          <li>
-            <span class="text-yellow-200 font-semibold">Vue.Js v3</span> - TypeScript
-            - <span class="text-yellow-200 font-semibold">NestJs</span> - MikroOrm
-            - PostgreSQL
-          </li>
-        </ul>
-      </div>
+  <BoxContainer>
+    <article aria-labelledby="socialitiy-title">
+      <header>
+        <figure class="flex items-center justify-between">
+          <Image src={SocialicityLogo} alt="Socialicity Logo" height="50" />
 
-      <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
-
-      <div class="ml-12">
-        <div class="flex items-center justify-between">
-          <Image
-            src={OpenbankLogo}
-            alt="OpenBank"
-            height="30"
-            class="object-contain flex-shrink-0 mr-6"
-          />
-          <div class="flex flex-col">
+          <figcaption class="flex flex-col">
             <p class="text-yellow-500 font-semibold">Front end developer</p>
-            <p>2 years</p>
-          </div>
+            <p>
+              <time datetime="2019-12">Dec 2019</time> - <time
+                datetime="2021-05">May 2021</time
+              >
+            </p>
+          </figcaption>
+        </figure>
+      </header>
+      <div class="mt-6">
+        <div class="ml-12">
+          <h3 id="socialicity-title" class="sr-only">
+            Socialicity — Frontend Developer
+          </h3>
+          <ul class="list-disc mt-4">
+            <li>
+              Built a sports betting app with <span
+                class="text-yellow-200 font-semibold">React</span
+              > Hooks, TypeScript, and state management using Redux and Thunk.
+            </li>
+            <li>
+              Created UI components with Styled Components and implemented
+              designs with Flexbox and CSS Grid.
+            </li>
+            <li>
+              Backend integration in a .NET Core environment with SQL Server and
+              deployments via Azure DevOps.
+            </li>
+          </ul>
         </div>
-        <ul class="list-disc mt-4 pl-5">
-          <li>
-            Development and maintenance of functionalities across different
-            Openbank verticals and multiple countries.
-          </li>
-          <li>
-            <span class="text-yellow-200 font-semibold">React</span> - Typescript
-            - Styled Components - Microfrontends - SonarQube - RTL – PR review
-          </li>
-        </ul>
       </div>
-    </div>
+    </article>
   </BoxContainer>
 
   <VerticalLine height="h-16" />
 
   <BoxContainer>
-    <div class="flex items-center justify-between">
-      <Image src={GftLogo} alt="GFT" height="40" />
-    </div>
-    <div class="mt-6">
-      <div class="ml-12">
-        <div class="flex items-center justify-between">
-          <Image
-            src={BbvaLogo}
-            alt="BBVA"
-            height="25"
-            class="object-contain flex-shrink-0 mr-6"
-          />
-          <div class="flex flex-col">
+    <article aria-labelledby="tdconsulting-title">
+      <header>
+        <figure class="flex items-center justify-between">
+          <Image src={TdLogo} alt="TDConsulting Logo" height="60" />
+          <figcaption class="flex flex-col">
             <p class="text-yellow-500 font-semibold">Front end developer</p>
-            <p>Oct 2021 - May 2022</p>
-          </div>
+            <p>
+              <time datetime="2019-09">Sep 2019</time> - <time
+                datetime="2019-12">Dic 2019</time
+              >
+            </p>
+          </figcaption>
+        </figure>
+      </header>
+      <div class="mt-6">
+        <div class="ml-12">
+          <h3 id="tdconsulting-title" class="sr-only">
+            TDconsulting — Frontend Developer
+          </h3>
+          <ul class="list-disc mt-4">
+            <li>
+              Mantain the internal web app of Activa group, creating new
+              functionalities in a .NET environment with <span
+                class="text-yellow-200 font-semibold">AngularJS</span
+              >, Razor and JQuery.
+            </li>
+            <li>Applying new designs with CSS.</li>
+          </ul>
         </div>
-        <ul class="list-disc mt-4 pl-5">
-          <li>
-            Developed features for BBVA Spain's mobile app using <span
-              class="text-yellow-200 font-semibold">EmberJs</span
-            >.
-          </li>
-          <li>
-            Worked under Kanban methodology with Atlassian tools (Jira,
-            Bitbucket, Bamboo).
-          </li>
-          <li>
-            Unit testing with Jest and E2E testing using a custom framework
-            based on Cucumber.
-          </li>
-          <li>Automated tasks with Husky and Lint-staged.</li>
-        </ul>
       </div>
-    </div>
-  </BoxContainer>
-
-  <VerticalLine height="h-16" />
-
-  <BoxContainer>
-    <div class="flex items-center justify-between">
-      <Image src={PwcLogo} alt="PWC" height="80" />
-      <div class="flex flex-col">
-        <p class="text-yellow-500 font-semibold">Front end developer</p>
-        <p>May 2021 - Oct 2021</p>
-      </div>
-    </div>
-    <div class="mt-6">
-      <div class="ml-12">
-        <ul class="list-disc mt-4">
-          <li>
-            Developing in <span class="text-yellow-200 font-semibold"
-              >Angular 10</span
-            > and RxJS an app related with big data.
-          </li>
-          <li>Units test with Jasmine.</li>
-          <li>Continuous integration with Jenkins and Kubernetes.</li>
-        </ul>
-      </div>
-    </div>
-  </BoxContainer>
-
-  <VerticalLine height="h-16" />
-
-  <BoxContainer>
-    <div class="flex items-center justify-between">
-      <Image src={SocialicityLogo} alt="Socialicity" height="50" />
-      <div class="flex flex-col">
-        <p class="text-yellow-500 font-semibold">Front end developer</p>
-        <p>Dec 2019 - May 2021</p>
-      </div>
-    </div>
-    <div class="mt-6">
-      <div class="ml-12">
-        <ul class="list-disc mt-4">
-          <li>
-            Built a sports betting app with <span
-              class="text-yellow-200 font-semibold">React</span
-            > Hooks, TypeScript, and state management using Redux and Thunk.
-          </li>
-          <li>
-            Created UI components with Styled Components and implemented designs
-            with Flexbox and CSS Grid.
-          </li>
-          <li>
-            Backend integration in a .NET Core environment with SQL Server and
-            deployments via Azure DevOps.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </BoxContainer>
-
-  <VerticalLine height="h-16" />
-
-  <BoxContainer>
-    <div class="flex items-center justify-between">
-      <Image src={TdLogo} alt="TDConsulting" height="60" />
-      <div class="flex flex-col">
-        <p class="text-yellow-500 font-semibold">Front end developer</p>
-        <p>Sep 2019 - Dic 2019</p>
-      </div>
-    </div>
-    <div class="mt-6">
-      <div class="ml-12">
-        <ul class="list-disc mt-4">
-          <li>
-            Mantain the internal web app of Activa group, creating new
-            functionalities in a .NET environment with <span
-              class="text-yellow-200 font-semibold">AngularJS</span
-            >, Razor and JQuery.
-          </li>
-          <li>Applying new designs with CSS.</li>
-        </ul>
-      </div>
-    </div>
+    </article>
   </BoxContainer>
 
   <VerticalLine height="h-32" endCircle={false} />

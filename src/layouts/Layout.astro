@@ -1,15 +1,36 @@
 ---
 import Header from "../components/Header.astro";
 
-const { title = "Juan luis Moreno | Frontend Developer", children } =
-  Astro.props;
+const {
+  title = "Juan Luis Moreno | Frontend Developer",
+  description = "Front-end developer specializing in JavaScript. Real-world projects, modern UI, and a focus on performance.",
+  canonical = "https://tudominio.com/",
+} = Astro.props;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#121E28" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://tudominio.com/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://tudominio.com/og-image.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +48,6 @@ const { title = "Juan luis Moreno | Frontend Developer", children } =
 
 <script is:inline>
   const run = () => {
-    console.log("[navHighlight] init");
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("[data-spy-link]");
 
@@ -38,6 +58,7 @@ const { title = "Juan luis Moreno | Frontend Developer", children } =
         const active = a.getAttribute("href") === hash;
         a.classList.toggle("text-yellow-500", active);
         a.classList.toggle("text-slate-300", !active);
+        a.setAttribute("aria-current", active ? "true" : "false");
       });
     };
 
@@ -73,4 +94,33 @@ const { title = "Juan luis Moreno | Frontend Developer", children } =
     run();
   }
   document.addEventListener("astro:page-load", run);
+</script>
+
+<script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan Luis Moreno",
+    "jobTitle": "Frontend Developer",
+    "url": "https://tudominio.com/",
+    "sameAs": [
+      "https://github.com/JuanLu90",
+      "https://www.linkedin.com/in/juanlumoreno/"
+    ]
+  }
+</script>
+
+<script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SaaS Admin Dashboard",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://dashboard-sass-admin.vercel.app/",
+    "creator": {
+      "@type": "Person",
+      "name": "Juan Luis Moreno"
+    }
+  }
 </script>

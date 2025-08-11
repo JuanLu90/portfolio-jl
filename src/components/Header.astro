@@ -14,7 +14,10 @@ const navItems: NavItem[] = [
 <header
   class="fixed top-0 left-0 w-full bg-background/80 backdrop-blur-sm z-50"
 >
-  <nav class="max-w-4xl mx-auto flex justify-center py-4">
+  <nav
+    aria-label="Main Sections"
+    class="max-w-4xl mx-auto flex justify-center py-4"
+  >
     <ul class="flex gap-8">
       {
         navItems.map((item) => (

@@ -49,39 +49,62 @@ const btnBase =
 const btnDark = `${btnBase} bg-gray-800 text-white hover:bg-gray-700`;
 ---
 
-<section id="projects" class="scroll-mt-32">
-  <h2
-    class="text-3xl font-extrabold tracking-tight mb-2 text-slate-300 my-6 text-center"
-  >
-    Projects
-  </h2>
-
-  <div class="mt-6">
-    <h3 class="text-2xl font-bold tracking-tight mb-4 text-slate-200">
-      SaaS Admin Dashboard
-    </h3>
-
-    <a
-      href="https://dashboard-sass-admin.vercel.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="block overflow-hidden border border-slate-800"
-      aria-label="Open live demo SaaS Admin Dashboard"
+<section id="projects" class="scroll-mt-32" aria-labelledby="proj-heading">
+  <header>
+    <h2
+      id="proj-heading"
+      class="text-3xl font-extrabold tracking-tight mb-2 text-slate-300 my-6 text-center"
     >
-      <Image
-        src={DashboardProyect}
-        alt="Dashboard saas admin project"
-        class="transition-transform duration-300 ease-in-out hover:scale-105"
-      />
-    </a>
+      Projects
+    </h2>
+  </header>
+
+  <article
+    class="mt-6"
+    aria-labelledby="dashboard-title"
+    itemscope
+    itemtype="https://schema.org/SoftwareApplication"
+  >
+    <header>
+      <h3
+        id="dashboard-title"
+        class="text-2xl font-bold tracking-tight mb-4 text-slate-200"
+        itemprop="name"
+      >
+        SaaS Admin Dashboard
+      </h3>
+    </header>
+
+    <figure class="mb-4">
+      <a
+        href="https://dashboard-sass-admin.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open live demo of SaaS Admin Dashboard"
+        itemprop="url"
+      >
+        <Image
+          src={DashboardProyect}
+          alt="Preview of SaaS Admin Dashboard showing analytics and admin controls"
+          class="border border-slate-800 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105"
+          itemprop="screenshot"
+        />
+      </a>
+      <figcaption class="sr-only">
+        SaaS Admin Dashboard — Full-stack admin panel built with Next.js and
+        FastAPI.
+      </figcaption>
+    </figure>
 
     <TechPills techs={DashboardProyectStack} />
 
-    <p class="text-slate-200 mt-4">
-      A full-stack admin panel built with Next.js 14 and FastAPI, featuring JWT
-      authentication with role-based access control, interactive data
-      visualizations, automated testing, and a modern responsive UI. Designed
-      for scalability, security, and production readiness.
+    <p class="text-slate-200 mt-4" itemprop="description">
+      A full-stack admin panel built with <strong>Next.js 14</strong> and <strong
+        >FastAPI</strong
+      >, featuring JWT authentication with role-based access control,
+      interactive data visualizations, automated testing, and a modern
+      responsive UI. Designed for scalability, security, and production
+      readiness.
     </p>
 
     <div class="flex flex-wrap gap-3 mt-4">
@@ -90,6 +113,8 @@ const btnDark = `${btnBase} bg-gray-800 text-white hover:bg-gray-700`;
         target="_blank"
         rel="noopener noreferrer"
         class={btnDark}
+        aria-label="View SaaS Admin Dashboard source code on GitHub"
+        itemprop="codeRepository"
       >
         <Github class="w-5 h-5" />
         <span>GitHub</span>
@@ -100,10 +125,11 @@ const btnDark = `${btnBase} bg-gray-800 text-white hover:bg-gray-700`;
         target="_blank"
         rel="noopener noreferrer"
         class={`${btnDark} justify-center min-w-[140px] whitespace-nowrap`}
+        aria-label="View live demo of SaaS Admin Dashboard"
       >
         <Web class="w-5 h-5" />
         <span>Live&nbsp;Demo</span>
       </a>
     </div>
-  </div>
+  </article>
 </section>
