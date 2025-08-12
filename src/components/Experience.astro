@@ -25,7 +25,7 @@ import ScrollLink from "./ScrollLink.astro";
 
   <BoxContainer>
     <article aria-labelledby="entelgy-title">
-      <header class="flex items-center justify-between">
+      <header class="flex flex-col sm:flex-row sm:items-center justify-between">
         <Image src={EntegyLogo} alt="Entelgy Logo" height="80" />
         <span
           >Remote | <time datetime="2022-05">May 2022</time> - <time
@@ -35,7 +35,7 @@ import ScrollLink from "./ScrollLink.astro";
       </header>
 
       <div class="mt-6">
-        <div class="ml-12">
+        <div class="sm:ml-12">
           <figure class="flex items-center justify-between">
             <Image
               src={CajaruralLogo}
@@ -77,7 +77,7 @@ import ScrollLink from "./ScrollLink.astro";
 
         <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
 
-        <div class="ml-12">
+        <div class="sm:ml-12">
           <figure class="flex items-center justify-between">
             <Image
               src={MasmovilLogo}
@@ -108,7 +108,42 @@ import ScrollLink from "./ScrollLink.astro";
 
         <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
 
-        <div class="ml-12">
+        <div class="sm:ml-12">
+          <figure class="flex items-center justify-between">
+            <Image
+              src={EntegyLogo}
+              alt="Entelgy"
+              height="50"
+              class="w-auto object-contain flex-shrink-0 mr-6"
+            />
+            <div class="flex flex-col">
+              <figcaption>
+                <h3 class="text-yellow-500 font-semibold">
+                  Front end developer
+                </h3>
+                <p>6 months</p>
+              </figcaption>
+            </div>
+          </figure>
+          <h3 id="entelgy-title" class="sr-only">
+            Entelgy — Frontend Developer
+          </h3>
+          <ul class="list-disc mt-4 pl-5">
+            <li>
+              Created from scratch an internal application that interacts with a
+              chatgpt model and its corresponding administrator part to manage
+              users.
+            </li>
+            <li>
+              <span class="text-yellow-200 font-semibold">React</span> - Api context
+              - Styled Components - Prettier - ESlint - Manager server
+            </li>
+          </ul>
+        </div>
+
+        <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+
+        <div class="sm:ml-12">
           <figure class="flex items-center justify-between">
             <Image
               src={OpenbankLogo}
@@ -147,7 +182,7 @@ import ScrollLink from "./ScrollLink.astro";
         <Image src={GftLogo} alt="GFT Logo" height="40" />
       </header>
       <div class="mt-6">
-        <div class="ml-12">
+        <div class="sm:ml-12">
           <figure class="flex items-center justify-between">
             <Image
               src={BbvaLogo}
@@ -189,7 +224,7 @@ import ScrollLink from "./ScrollLink.astro";
   <VerticalLine height="h-16" />
 
   <BoxContainer>
-    <article aria-labelledby="pwc-title">
+    <article class="px-4" aria-labelledby="pwc-title">
       <header>
         <figure class="flex items-center justify-between">
           <Image src={PwcLogo} alt="PWC Logo" height="80" />
@@ -205,7 +240,7 @@ import ScrollLink from "./ScrollLink.astro";
         </figure>
       </header>
       <div class="mt-6">
-        <div class="ml-12">
+        <div class="sm:ml-12">
           <h3 id="pwc-title" class="sr-only">PWC — Frontend Developer</h3>
           <ul class="list-disc mt-4">
             <li>
@@ -224,7 +259,7 @@ import ScrollLink from "./ScrollLink.astro";
   <VerticalLine height="h-16" />
 
   <BoxContainer>
-    <article aria-labelledby="socialitiy-title">
+    <article class="px-4" aria-labelledby="socialitiy-title">
       <header>
         <figure class="flex items-center justify-between">
           <Image src={SocialicityLogo} alt="Socialicity Logo" height="50" />
@@ -240,7 +275,7 @@ import ScrollLink from "./ScrollLink.astro";
         </figure>
       </header>
       <div class="mt-6">
-        <div class="ml-12">
+        <div class="sm:ml-12">
           <h3 id="socialicity-title" class="sr-only">
             Socialicity — Frontend Developer
           </h3>
@@ -267,7 +302,7 @@ import ScrollLink from "./ScrollLink.astro";
   <VerticalLine height="h-16" />
 
   <BoxContainer>
-    <article aria-labelledby="tdconsulting-title">
+    <article class="px-4" aria-labelledby="tdconsulting-title">
       <header>
         <figure class="flex items-center justify-between">
           <Image src={TdLogo} alt="TDConsulting Logo" height="60" />
@@ -282,7 +317,7 @@ import ScrollLink from "./ScrollLink.astro";
         </figure>
       </header>
       <div class="mt-6">
-        <div class="ml-12">
+        <div class="sm:ml-12">
           <h3 id="tdconsulting-title" class="sr-only">
             TDconsulting — Frontend Developer
           </h3>
