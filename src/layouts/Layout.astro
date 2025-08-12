@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 const {
   title = "Juan Luis Moreno | Frontend Developer",
   description = "Front-end developer specializing in JavaScript. Real-world projects, modern UI, and a focus on performance.",
-  canonical = "https://tudominio.com/",
+  canonical = "https://www.juanlumoreno.dev",
 } = Astro.props;
 ---
 
@@ -23,13 +23,19 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content="https://tudominio.com/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://www.juanlumoreno.dev/og-image.jpg"
+    />
     <meta property="og:locale" content="es_ES" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://tudominio.com/og-image.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://www.juanlumoreno.dev/og-image.jpg"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,7 +108,7 @@ const {
     "@type": "Person",
     "name": "Juan Luis Moreno",
     "jobTitle": "Frontend Developer",
-    "url": "https://tudominio.com/",
+    "url": "https://www.juanlumoreno.dev",
     "sameAs": [
       "https://github.com/JuanLu90",
       "https://www.linkedin.com/in/juanlumoreno/"
