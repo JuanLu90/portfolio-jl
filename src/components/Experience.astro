@@ -75,7 +75,7 @@ import ScrollLink from "./ScrollLink.astro";
           </ul>
         </div>
 
-        <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+        <hr class="border border-slate-600 mb-6 mt-8 w-auto sm:w-80 m-auto" />
 
         <div class="sm:ml-12">
           <figure class="flex items-center justify-between">
@@ -106,7 +106,7 @@ import ScrollLink from "./ScrollLink.astro";
           </ul>
         </div>
 
-        <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+        <hr class="border border-slate-600 mb-6 mt-8 w-auto sm:w-80 m-auto" />
 
         <div class="sm:ml-12">
           <figure class="flex items-center justify-between">
@@ -141,17 +141,19 @@ import ScrollLink from "./ScrollLink.astro";
           </ul>
         </div>
 
-        <hr class="border border-slate-600 mb-6 mt-8 w-80 m-auto" />
+        <hr class="border border-slate-600 mb-6 mt-8 w-auto sm:w-80 m-auto" />
 
         <div class="sm:ml-12">
-          <figure class="flex items-center justify-between">
+          <figure
+            class="flex flex-col sm:flex-row sm:items-center justify-between"
+          >
             <Image
               src={OpenbankLogo}
               alt="OpenBank"
               height="30"
               class="object-contain flex-shrink-0 mr-6"
             />
-            <figcaption class="flex flex-col">
+            <figcaption class="flex flex-col mt-3 sm:mt-auto">
               <p class="text-yellow-500 font-semibold">Front end developer</p>
               <p>2 years</p>
             </figcaption>
@@ -227,7 +229,7 @@ import ScrollLink from "./ScrollLink.astro";
     <article class="px-4" aria-labelledby="pwc-title">
       <header>
         <figure class="flex items-center justify-between">
-          <Image src={PwcLogo} alt="PWC Logo" height="80" />
+          <Image src={PwcLogo} alt="PWC Logo" height="70" />
 
           <figcaption class="flex flex-col">
             <p class="text-yellow-500 font-semibold">Front end developer</p>
@@ -261,10 +263,12 @@ import ScrollLink from "./ScrollLink.astro";
   <BoxContainer>
     <article class="px-4" aria-labelledby="socialitiy-title">
       <header>
-        <figure class="flex items-center justify-between">
+        <figure
+          class="flex flex-col sm:flex-row sm:items-center justify-between"
+        >
           <Image src={SocialicityLogo} alt="Socialicity Logo" height="50" />
 
-          <figcaption class="flex flex-col">
+          <figcaption class="flex flex-col mt-3 sm:mt-auto">
             <p class="text-yellow-500 font-semibold">Front end developer</p>
             <p>
               <time datetime="2019-12">Dec 2019</time> - <time
@@ -304,9 +308,11 @@ import ScrollLink from "./ScrollLink.astro";
   <BoxContainer>
     <article class="px-4" aria-labelledby="tdconsulting-title">
       <header>
-        <figure class="flex items-center justify-between">
+        <figure
+          class="flex flex-col sm:flex-row sm:items-center justify-between"
+        >
           <Image src={TdLogo} alt="TDConsulting Logo" height="60" />
-          <figcaption class="flex flex-col">
+          <figcaption class="flex flex-col mt-3 sm:mt-auto">
             <p class="text-yellow-500 font-semibold">Front end developer</p>
             <p>
               <time datetime="2019-09">Sep 2019</time> - <time
