@@ -37,6 +37,18 @@ const {
   </body>
 </html>
 
+<style>
+  body {
+    background-color: #0f172a;
+    background-image: radial-gradient(
+      ellipse 75% 75% at 50% -20%,
+      rgba(230, 188, 36, 0.08),
+      rgba(80, 70, 140, 0.35),
+      transparent
+    );
+  }
+</style>
+
 <script is:inline>
   const run = () => {
     const sections = document.querySelectorAll("section[id]");
@@ -47,7 +59,7 @@ const {
     const setActive = (hash) => {
       navLinks.forEach((a) => {
         const active = a.getAttribute("href") === hash;
-        a.classList.toggle("text-yellow-500", active);
+        a.classList.toggle("text-orange-400", active);
         a.classList.toggle("text-slate-300", !active);
         a.setAttribute("aria-current", active ? "true" : "false");
       });
