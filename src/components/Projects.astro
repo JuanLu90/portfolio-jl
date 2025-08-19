@@ -99,12 +99,12 @@ const btnDark = `${btnBase} bg-gray-800 text-white hover:bg-gray-700`;
     <TechPills techs={DashboardProyectStack} />
 
     <p class="text-slate-200 mt-4" itemprop="description">
-      A full-stack admin panel built with <strong>Next.js 14</strong> and <strong
-        >FastAPI</strong
-      >, featuring JWT authentication with role-based access control,
-      interactive data visualizations, automated testing, and a modern
-      responsive UI. Designed for scalability, security, and production
-      readiness.
+      A full-stack admin panel built with <span
+        class="text-yellow-200 font-semibold">Next.js 14</span
+      > and <span class="text-yellow-200 font-semibold">FastAPI</span> featuring
+      JWT authentication with role-based access control, interactive data visualizations,
+      automated testing, and a modern responsive UI. Designed for scalability, security,
+      and production readiness.
     </p>
 
     <div class="flex flex-wrap gap-3 mt-4">
@@ -124,10 +124,10 @@ const btnDark = `${btnBase} bg-gray-800 text-white hover:bg-gray-700`;
         href="https://dashboard-sass-admin.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        class={`${btnDark} justify-center min-w-[140px] whitespace-nowrap`}
+        class={btnDark}
         aria-label="View live demo of SaaS Admin Dashboard"
       >
-        <Web class="w-5 h-5" />
+        <Web class="w-6 h-6" />
         <span>Live&nbsp;Demo</span>
       </a>
     </div>
